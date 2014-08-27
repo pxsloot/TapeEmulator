@@ -11,11 +11,11 @@ struct Program {
 };
 
 Program p = {
-  "0001",
-  "1800",
-  "0000",
+  "0001", // filename
+  "1800", // start address
+  "0000", // end address (will be calculated from program data
   //"0E0021C000CDE4050EC0210001CDE40518EE",
-  "DD212018CDFE05FE1320F9760000000000000000000000000000000000000000AEB51F858F37",
+  "DD212018CDFE05FE1320F9760000000000000000000000000000000000000000AEB51F858F37", // program data in hex
 };
 
 int out=13;
@@ -29,28 +29,5 @@ void setup(){
 }
 
 void loop(){
-  int stop_address = (getValue(p.start_address[3]))
-                   + (getValue(p.start_address[2]) << 4)
-                   + (getValue(p.start_address[1]) << 8)
-                   + (getValue(p.start_address[0]) << 12)
-                   + (p.data.length()/2) - 1;
-
-  String(stop_address,HEX).toCharArray(p.stop_address, 5);
-  //tapeHeader();
-  leadsync();
-  // filename
-  tapesend2Byte(p.filename);
-  // start_addr
-  tapesend2Byte(p.start_address);
-  // stop_addr
-  tapesend2Byte(p.stop_address);
-  // checksum
-  tapesend(checksum(p.data));
-  // sync
-  datasync();
-  // data
-  tapesend(p.data);
-  // 2 sec sync
-  datasync();  
   delay(1000000);
 }

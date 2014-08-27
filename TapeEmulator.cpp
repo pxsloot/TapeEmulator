@@ -26,6 +26,32 @@ String TapeEmulator::checksum(String c){
   return String(sum & 0xFF,HEX);
 }
 
+void TapeEmulator::sendProgram() {
+  int stop_address = (getValue(p.start_address[3]))
+                   + (getValue(p.start_address[2]) << 4)
+                   + (getValue(p.start_address[1]) << 8)
+                   + (getValue(p.start_address[0]) << 12)
+                   + (p.data.length()/2) - 1;
+
+  String(stop_address,HEX).toCharArray(p.stop_address, 5);
+  //tapeHeader();
+  leadsync();
+  // filename
+  tapesend2Byte(p.filename);
+  // start_addr
+  tapesend2Byte(p.start_address);
+  // stop_addr
+  tapesend2Byte(p.stop_address);
+  // checksum
+  tapesend(checksum(p.data));
+  // sync
+  datasync();
+  // data
+  tapesend(p.data);
+  // 2 sec sync
+  datasync();
+}
+
 void TapeEmulator::tapesend2Byte(char c[5]){
   tapesendByte((getValue(c[2])<<4) + getValue(c[3]));
   tapesendByte((getValue(c[0])<<4) + getValue(c[1]));
