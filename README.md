@@ -10,6 +10,11 @@ The sounds on a (data) cassette tape are created by toggling 1 bit. So
 I grabbed my Arduino, hooked 1 pin to a small LM386 amplifier and began
 toggling one bit.
 
+FIXME:
+-----
+While the proof of concept sketch worked, I'm in the middle of creating
+a library from it. Things will not compile at this point.
+
 
 TODO:
 ----
