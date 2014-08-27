@@ -65,7 +65,6 @@ void TapeEmulator::datasync(){
   }
 }
 
-
 void TapeEmulator::bit0() {
   for (int n=0; n<8; n++) { TapeEmulator::khz2(); }
   for (int n=0; n<2; n++) { TapeEmulator::khz1(); }  

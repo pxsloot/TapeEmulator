@@ -31,5 +31,4 @@ class TapeEmulator
     int _datasync_period;
 };
 
-
 #endif

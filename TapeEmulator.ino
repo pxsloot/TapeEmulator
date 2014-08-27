@@ -54,7 +54,3 @@ void loop(){
   datasync();  
   delay(1000000);
 }
-
-
-
-
