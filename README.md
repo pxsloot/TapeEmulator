@@ -13,7 +13,7 @@ toggling one bit.
 FIXME:
 -----
 While the proof of concept sketch worked, I'm in the middle of creating
-a library from it. Things will not compile at this point.
+a library from it. Things will most likely not compile at this point.
 
 
 TODO:
