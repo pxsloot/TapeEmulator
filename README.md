@@ -12,9 +12,10 @@ toggling one bit.
 
 FIXME:
 -----
-created 2 standalone sketches (MPF1 and KIM1). For now, edit the sketch
-and add the program data.
-
+* created 2 standalone sketches (MPF1 and KIM1). For now, edit the sketch
+  and add the program data.
+* the KIM1 sketch won't create the right stream. It's late, can't be
+  bothered.
 
 TODO:
 ----
@@ -24,5 +25,3 @@ TODO:
 * add an SD card to get the files from (now hardcoded)
 * LCD screen to browse/select file to upload
 * add 'save' feature
-* create code for more machines. Only works for MPF-1 now.
-
