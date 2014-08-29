@@ -12,15 +12,15 @@ toggling one bit.
 
 FIXME:
 -----
-While the proof of concept sketch worked, I'm in the middle of creating
-a library from it. Things will most likely not compile at this point.
+created 2 standalone sketches (MPF1 and KIM1). For now, edit the sketch
+and add the program data.
 
 
 TODO:
 ----
 
 * learn proper C/C++
-* cleanup the internal format of the program
+* cleanup the internal data format of the program
 * add an SD card to get the files from (now hardcoded)
 * LCD screen to browse/select file to upload
 * add 'save' feature
