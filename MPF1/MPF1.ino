@@ -104,8 +104,8 @@ void leadsync(){
   unsigned long startMillis = millis();
   unsigned long currentMillis = millis();
   while (currentMillis - startMillis < leadsync_period ) {
-    currentMillis = millis();
     khz1();
+    currentMillis = millis();
   }
 }
 
@@ -113,8 +113,8 @@ void datasync(){
   unsigned long startMillis = millis();
   unsigned long currentMillis = millis();
   while (currentMillis - startMillis < datasync_period ) {
-    currentMillis = millis();
     khz2();
+    currentMillis = millis();
   }
 }
 

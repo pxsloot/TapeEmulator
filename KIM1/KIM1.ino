@@ -135,27 +135,15 @@ void tapesend(String c){
 // bit 0 = 3700Hz + 3700Hz + 2400Hz
 // bit 0 = 3700Hz + 2400Hz + 2400Hz
 void bit0() {
-  for (int n=0; n<9; n++) { 
-    hightone(); 
-  }
-  for (int n=0; n<9; n++) { 
-    hightone(); 
-  }
-  for (int n=0; n<6; n++) { 
-    lowtone(); 
-  }
+  for (int n=0; n<9; n++) { hightone(); }
+  for (int n=0; n<9; n++) { hightone(); }
+  for (int n=0; n<6; n++) { lowtone();  }
 }
 
 void bit1() {
-  for (int n=0; n<9; n++) { 
-    hightone(); 
-  }
-  for (int n=0; n<6; n++) { 
-    lowtone(); 
-  }
-  for (int n=0; n<6; n++) { 
-    lowtone(); 
-  }
+  for (int n=0; n<9; n++) { hightone(); }
+  for (int n=0; n<6; n++) { lowtone();  }
+  for (int n=0; n<6; n++) { lowtone();  }
 }
 
 void hightone() {
